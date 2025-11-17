@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Halaman Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.dashboard-content-wrapper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid black;
+}
+
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 15px; 
+    border: 1px solid black; 
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.card-icon-top {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 0 auto 10px auto; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card .card-icon-top { background-color: gray; }
+.sales-card .card-icon-top { background-color: gray; } 
+.revenue-card .card-icon-top { background-color: gray; } 
+
+
+.card-title {
+    font-size: 0.8rem;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.card-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.empty-box {
+    width: 100%;
+    height: 150px; 
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; 
+}
+.btn-view-products{
+    background-color: darkslategray;
+    color:white;
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+}
+.btn-view-products:hover{
+    background-color:grey ;
+}
+</style>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="sidebar">
+                <a href="dashboard.html" class="active" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="products.html" title="Products"><i class="fas fa-box-open"></i></a>
+                <a href="#" title="Keuangan"><i class="fas fa-dollar-sign"></i></a>
+                <a href="#" title="Laporan"><i class="fas fa-chart-bar"></i></a> 
+                <a href="#" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="index.html" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="page-header">
+                <h2>Dashboard</h2>
+            </div>
+            
+            <div class="dashboard-content-wrapper">
+                
+                <div class="card-container">
+                    
+                    <div class="card product-card">
+                        <div class="card-icon-top">
+                            <i class="fas fa-boxes"></i> 
+                        </div>
+                        <div class="card-title">Total Products</div>
+                        <div class="card-value" id="totalProducts">...</div>
+                    </div>
+
+                    <div class="card sales-card">
+                        <div class="card-icon-top">
+                            <i class="fas fa-shopping-bag"></i> 
+                        </div>
+                        <div class="card-title">Total Sales</div>
+                        <div class="card-value" id="totalSales">...</div>
+                    </div>
+
+                    <div class="card revenue-card">
+                        <div class="card-icon-top">
+                            <i class="fas fa-dollar-sign"></i> 
+                        </div>
+                        <div class="card-title">Total Revenue</div>
+                        <div class="card-value" id="totalRevenue">...</div>
+                    </div>
+                </div>
+
+                <div class="empty-box"></div>
+            </div>
+            <a href="products.html"
+            class="btn-view-products">Lihat Data Produk</a>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
